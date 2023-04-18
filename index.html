@@ -1,0 +1,29 @@
+<!-- index.html -->
+<html>
+  <body>
+    <div id="app"></div>
+
+    <!-- include Babel (for JSX) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- include React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- My script -->
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+
+      function getText(animal) {
+          const isFrog = animal == "frog";
+          return (isFrog? `I am a frog 🐸`: `I am another cool animal 😎`);
+        }
+        
+      const frog = "frog";
+      const text = 'hello, ${getText(frog)}';
+      ReactDOM.render(<h1>{text}</h1>, app);
+
+    </script>
+  </body>
+</html>
+
